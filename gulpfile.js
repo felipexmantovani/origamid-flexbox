@@ -6,6 +6,7 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const babel = require('gulp-babel');
 const autoPrefixer = require('gulp-autoprefixer');
+const htmlmin = require('gulp-htmlmin');
 const del = require('del');
 
 function cleanDist() {
@@ -13,10 +14,7 @@ function cleanDist() {
 }
 
 function jsLibs() {
-  return gulp
-    .src(['node_modules/@babel/polyfill/dist/polyfill.min.js'])
-    .pipe(concat('lib.js'))
-    .pipe(gulp.dest('temp'));
+  return gulp.src(['node_modules/@babel/polyfill/dist/polyfill.min.js']).pipe(concat('lib.js')).pipe(gulp.dest('temp'));
 }
 
 function jsTranspile() {
@@ -73,15 +71,22 @@ function cleanTemp() {
 }
 
 function copyHtml() {
-  return gulp.src('app/index.html').pipe(gulp.dest('dist'));
+  return gulp
+    .src('app/index.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('dist'));
+}
+
+function copyAssets() {
+  return gulp.src('app/assets/**/*').pipe(gulp.dest('dist/assets'));
 }
 
 const BUILD_CSS = gulp.series(cssLib, cssTranspile, cssBundle, cleanTemp);
 const BUILD_JS = gulp.series(jsLibs, jsTranspile, jsBundle, cleanTemp);
+const BUILD_ALL = gulp.series(cleanDist, BUILD_CSS, BUILD_JS, copyHtml, copyAssets);
 
-gulp.watch('app/scss/**/*.scss', gulp.series(BUILD_CSS));
-gulp.watch('app/js/*.js', gulp.series(BUILD_JS));
-
-const BUILD_ALL = gulp.series(cleanDist, gulp.series(BUILD_CSS), gulp.series(BUILD_JS), copyHtml);
+gulp.watch('app/scss/**/*.scss', BUILD_CSS);
+gulp.watch('app/js/*.js', BUILD_JS);
+gulp.watch(['app/*.html', 'app/assets/**/*'], BUILD_ALL);
 
 exports.default = BUILD_ALL;

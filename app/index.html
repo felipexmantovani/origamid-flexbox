@@ -5,9 +5,162 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FlexBlog</title>
 
+  <link rel="shortcut icon" href="assets/favicon/favicon.png" type="image/png">
   <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
+
+  <header class="header">
+    <div class="infos">
+      <div class="container">
+        <p>Seg/Sex - 08h00 às 18h00</p>
+        <a href="tel:+554499999999">+55 44 9 999-9999</a>
+        <p>Travessa Itororó, 470, Cianorte-PR</p>
+      </div>
+    </div>
+
+    <div class="menu">
+      <div class="container">
+        <div class="menu-logo">
+          <a href="#">FlexBlog</a>
+        </div>
+        <nav class="menu-nav">
+          <ul>
+            <li>
+              <a href="#sobre">Sobre</a>
+              <a href="#produtos">Produtos</a>
+              <a href="#preco">Preço</a>
+              <a href="#qualidade">Qualidade</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1 class="intro-text">Novos valores e<br> propriedades do CSS</h1>
+  </div>
+
+  <section id="about" class="about container">
+    <div class="about-text">
+      <h1>Sobre</h1>
+      <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão das condições inegavelmente apropriadas objetivos.</p>
+      <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão das condições inegavelmente apropriadas objetivos.</p>
+    </div>
+    <div class="about-img-1">
+      <img src="assets/img/sobre1.jpg" alt="Sobre img-1">
+    </div>
+    <div class="about-img-2">
+      <img src="assets/img/sobre2.jpg" alt="Sobre img-2">
+    </div>
+  </section>
+
+  <section id="products" class="products container">
+    <div class="products-title">
+      <h1>Produtos</h1>
+    </div>
+    <div class="products-boxes">
+      <div class="products-item purple">
+        <h1>Purple</h1>
+        <img src="./assets/img/produtos1.jpg" alt="Produto purple">
+      </div>
+      <div class="products-item pink">
+        <h1>Pink</h1>
+        <img src="./assets/img/produtos2.jpg" alt="Produto pink">
+      </div>
+      <div class="products-item cyan">
+        <h1>Cyan</h1>
+        <img src="./assets/img/produtos3.jpg" alt="Produto cyan">
+      </div>
+    </div>
+  </section>
+
+  <section id="prices" class="prices">
+    <div class="prices-item">
+      <h1>Cobre</h1>
+      <span><sub>R$</sub>19</span>
+      <ul>
+        <li>Planos Ilimitados</li>
+        <li>Acesso Restrito</li>
+        <li>Conteúdo Secreto</li>
+        <li>Suporte 24h</li>
+      </ul>
+      <a href="#">Comprar</a>
+    </div>
+    <div class="prices-item">
+      <h1>Prata</h1>
+      <span><sub>R$</sub>39</span>
+      <ul>
+        <li>Planos Ilimitados</li>
+        <li>Acesso Restrito</li>
+        <li>Conteúdo Secreto</li>
+        <li>Suporte 24h</li>
+        <li>Compra Exclusiva</li>
+      </ul>
+      <a href="#">Comprar</a>
+    </div>
+    <div class="prices-item">
+      <h1>Ouro</h1>
+      <span><sub>R$</sub>79</span>
+      <ul>
+        <li>Planos Ilimitados</li>
+        <li>Acesso Restrito</li>
+        <li>Conteúdo Secreto</li>
+        <li>Suporte 24h</li>
+        <li>Compra Exclusiva</li>
+        <li>Download dos Itens</li>
+      </ul>
+      <a href="#">Comprar</a>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="features-item purple">
+      <h2>Inteligente</h2>
+      <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão das condições.</p>
+    </div>
+    <div class="features-item pink">
+      <h2>Compacto</h2>
+      <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão das condições inegavelmente apropriadas.</p>
+    </div>
+    <div class="features-item cyan">
+      <h2>Econômico</h2>
+      <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão das condições.</p>
+    </div>
+
+    <div class="features-item purple">
+      <h2>Transparente</h2>
+      <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão das condições.</p>
+    </div>
+    <div class="features-item pink">
+      <h2>Opaco</h2>
+      <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão das condições inegavelmente apropriadas.</p>
+    </div>
+    <div class="features-item cyan">
+      <h2>Sustentável</h2>
+      <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão das condições.</p>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-text">
+        <h2>Newsletter</h2>
+        <p>assine e fique por dentro das novidades</p>
+      </div>
+      <div>
+        <form>
+          <input type="text" name="news" id="news" placeholder="Seu e-mail">
+          <button type="submit">Assinar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>FlexBlog © Todos os direitos reservados.</p>
+  </footer>
 
   <script src="script.min.js"></script>
 </body>
