@@ -1,0 +1,73 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--blue-0);
+  color: var(--white);
+  text-shadow: none;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  background-color: var(--white);
+  overflow: hidden;
+  color: var(--gray-3);
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a,
+button,
+input,
+label,
+select,
+textarea {
+  transition: 0.25s all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0.15em 0 0.5em 0;
+}
+
+h1 {
+  font-size: 2.25em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.75em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.25em;
+}
+h6 {
+  font-size: 1em;
+}
+
+strong,
+b {
+  font-weight: 700;
+}

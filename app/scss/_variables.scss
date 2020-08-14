@@ -1,0 +1,25 @@
+:root {
+  // colors
+  --black: #000000;
+
+  --blue-0: #449DD7;
+  --blue-1: #63AEDF;
+  --blue-2: #7ABCE8;
+
+  --green-0: #5AA531;
+  --green-1: #74B347;
+  --green-2: #9CC77E;
+  --green-3: #BFE0A7;
+
+  --gray-0: #333333;
+  --gray-1: #666666;
+  --gray-2: #999999;
+  --gray-3: #CCCCCC;
+  --gray-4: #F0F0F0;
+
+  --white: #ffffff;
+
+  // fonts
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap');
+  --font-family: 'Nunito', sans-serif;
+}
