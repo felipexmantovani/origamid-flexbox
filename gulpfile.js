@@ -13,6 +13,10 @@ function cleanDist() {
   return del('dist');
 }
 
+function cleanTemp() {
+  return del('temp');
+}
+
 function jsLibs() {
   return gulp.src(['node_modules/@babel/polyfill/dist/polyfill.min.js']).pipe(concat('lib.js')).pipe(gulp.dest('temp'));
 }
@@ -38,13 +42,6 @@ function jsBundle() {
     .pipe(gulp.dest('dist'));
 }
 
-function cssLib() {
-  return gulp
-    .src(['node_modules/@fortawesome/fontawesome-free/css/all.min.css'])
-    .pipe(concat('lib.css'))
-    .pipe(gulp.dest('temp'));
-}
-
 function cssTranspile() {
   return gulp
     .src('app/scss/main.scss')
@@ -60,14 +57,14 @@ function cssTranspile() {
 
 function cssBundle() {
   return gulp
-    .src(['temp/lib.css', 'temp/main.css'])
+    .src(['temp/main.css', 'node_modules/@fortawesome/fontawesome-free/css/all.min.css'])
     .pipe(concat('style.css'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist'));
 }
 
-function cleanTemp() {
-  return del('temp');
+function copyWebfonts() {
+  return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/**/*').pipe(gulp.dest('dist/webfonts'));
 }
 
 function copyHtml() {
@@ -81,9 +78,9 @@ function copyAssets() {
   return gulp.src('app/assets/**/*').pipe(gulp.dest('dist/assets'));
 }
 
-const BUILD_CSS = gulp.series(cssLib, cssTranspile, cssBundle, cleanTemp);
+const BUILD_CSS = gulp.series(cssTranspile, cssBundle, cleanTemp);
 const BUILD_JS = gulp.series(jsLibs, jsTranspile, jsBundle, cleanTemp);
-const BUILD_ALL = gulp.series(cleanDist, BUILD_CSS, BUILD_JS, copyHtml, copyAssets);
+const BUILD_ALL = gulp.series(cleanDist, BUILD_CSS, BUILD_JS, copyHtml, copyAssets, copyWebfonts);
 
 gulp.watch('app/scss/**/*.scss', BUILD_CSS);
 gulp.watch('app/js/*.js', BUILD_JS);

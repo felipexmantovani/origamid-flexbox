@@ -2,25 +2,35 @@
   // colors
   --black: #000000;
 
-  --blue-0: #449DD7;
-  --blue-1: #63AEDF;
-  --blue-2: #7ABCE8;
-  --blue-3: #aaddff;
+  --blue-0: #091e97;
+  --blue-1: #122ab2;
+  --blue-2: #223dd4;
+  --blue-3: #2c70ff;
+  --blue-4: #6092ff;
 
-  --green-0: #5AA531;
-  --green-1: #74B347;
-  --green-2: #9CC77E;
-  --green-3: #BFE0A7;
+  --cyan-0: #4abecf;
+  --cyan-1: #66d9eb;
+  --cyan-2: #8eeaf8;
 
-  --gray-0: #333333;
-  --gray-1: #666666;
-  --gray-2: #999999;
-  --gray-3: #CCCCCC;
-  --gray-4: #F0F0F0;
+  --purple-0: #9162e7;
+  --purple-1: #ae81ff;
+  --purple-2: #c2a1ff;
+
+  --pink-0: #e2154b;
+  --pink-1: #f9265e;
+  --pink-2: #ff4d7c;
+
+  --gray-0: #222222;
+  --gray-1: #444444;
+  --gray-2: #7c7c7c;
+  --gray-3: #999999;
+  --gray-5: #a4a4a4;
+  --gray-6: #CCCCCC;
+  --gray-7: #f7f7f7;
 
   --white: #ffffff;
 
   // fonts
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap');
-  --font-family: 'Nunito', sans-serif;
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+  --font-family: 'Nunito', Helvetica, Arial, sans-serif;
 }
