@@ -1,6 +1,6 @@
 .about {
   color: var(--gray-0);
-  padding: 1.75em 0;
+  padding: 1.75em 0 2.5em 0;
 }
 
 .about-flex {
@@ -46,6 +46,9 @@
 @media(min-width: $md) {
   .about {
     padding: 3em 0;
+    h1 {
+      font-size: 3em;
+    }
   }
 
   .about-flex {
