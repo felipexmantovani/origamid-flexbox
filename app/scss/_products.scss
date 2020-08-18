@@ -18,16 +18,20 @@
   margin: 1em;
   border-top-width: 8px;
   border-top-style: solid;
+
   h1 {
     padding: 1.75em 0.5em;
     background-color: var(--gray-7);
   }
+
   &.purple {
     border-color: var(--purple-0);
   }
+
   &.pink {
     border-color: var(--pink-0);
   }
+
   &.cyan {
     border-color: var(--cyan-0);
   }
