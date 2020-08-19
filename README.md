@@ -23,5 +23,6 @@ http-server
 ```
 
 Você terá dois endereços no console, por exemplo:
-http://127.0.0.1:8080 (acesso somente pela sua máquina)
-http://192.168.0.19:8080 (acesso para outras máquinas/dispositivos na mesma rede)
+
+- http://127.0.0.1:8080 (acesso somente pela sua máquina)
+- http://192.168.0.19:8080 (acesso para outras máquinas/dispositivos na mesma rede)
