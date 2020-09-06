@@ -1,4 +1,12 @@
 # origamid-flexbox
+<img src='https://raw.githubusercontent.com/felipexmantovani/origamid-flexbox/master/doc/screen-1.gif' style="min-width: 100%" />
+
+---
+
+<img src='https://raw.githubusercontent.com/felipexmantovani/origamid-flexbox/master/doc/screen-2.gif' style="min-width: 100%" />
+
+---
+
 Projeto criado no curso de CSS Flexbox na plataforma da [@origamid](https://www.origamid.com/).
 
 ## Start
